@@ -3,7 +3,7 @@ FROM shadowrobot/build-tools:xenial-kinetic
 
 MAINTAINER "ROS Ukraine Community"
 
-LABEL Description="This ROS Melodic image for learning with Cloud 9 Web IDE" Vendor="ROS Ukraine" Version="1.0"
+LABEL Description="This ROS Kinetic image for learning with Cloud 9 Web IDE" Vendor="ROS Ukraine" Version="1.0"
 
 ARG learning_aurora_branch
 
