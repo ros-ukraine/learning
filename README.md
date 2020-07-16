@@ -1,5 +1,9 @@
-# learning
+# ROS Learning
+
 ROS Learning Materials
+
+[![License](https://img.shields.io/github/license/ros-ukraine/learning.svg)](https://github.com/ros-ukraine/learning/blob/kinetic-devel/LICENSE)
+
 
 ## ROS Basics
 
@@ -12,7 +16,8 @@ Get the latest Docker images
 docker pull rosukraine/learning:xenial-kinetic
 ```
 
-*Please note: On OS Windows switch you Docker to Linux containers mode*
+*Please note: On OS Windows you should switch your Docker Engine to Linux containers mode*
+
 
 Launch docker container using the following command
 ```bash
