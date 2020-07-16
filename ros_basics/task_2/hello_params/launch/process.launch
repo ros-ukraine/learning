@@ -1,0 +1,6 @@
+<launch>
+  <arg name="speed" default="15"/>
+  <node name="hello_params_node" pkg="hello_params" type="node" output="screen">
+    <param name="speed" value="$(arg speed)" type="int"/>
+  </node>
+</launch>

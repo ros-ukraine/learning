@@ -34,6 +34,8 @@ To start container again please type
 docker start ros_basics
 ```
 
+You could access Cloud9 web IDE in any modern browser by opening this link [http://localhost:8181](http://localhost:8181)
+
 ### Tasks
 
 Boilerplate code is located in ros_basics folder.
