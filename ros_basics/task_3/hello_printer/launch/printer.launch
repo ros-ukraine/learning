@@ -1,0 +1,3 @@
+<launch>
+  <node name="hello_printer" pkg="hello_printer" type="server" output="screen"/>
+</launch>
