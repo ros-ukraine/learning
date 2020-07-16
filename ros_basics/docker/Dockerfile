@@ -1,4 +1,5 @@
-FROM shadowrobot/build-tools:bionic-melodic
+#FROM shadowrobot/build-tools:bionic-melodic
+FROM shadowrobot/build-tools:xenial-kinetic
 
 MAINTAINER "ROS Ukraine Community"
 
