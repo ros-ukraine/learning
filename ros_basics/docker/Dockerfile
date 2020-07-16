@@ -1,4 +1,3 @@
-#FROM shadowrobot/build-tools:bionic-melodic
 FROM shadowrobot/build-tools:xenial-kinetic
 
 MAINTAINER "ROS Ukraine Community"
@@ -30,7 +29,7 @@ RUN set -x && \
     chmod 755 /tmp/oneliner && \
     \
     echo "Installing IDEs and gzweb" && \
-    /tmp/oneliner install_software --debug-branch $learning_aurora_branch software=[vscode,cloud9,gzweb] && \
+    /tmp/oneliner install_software --debug-branch $learning_aurora_branch software=[vscode,cloud9] && \
     \
     echo "Clean up" && \
     sudo apt-get clean && \
