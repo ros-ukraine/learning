@@ -13,7 +13,7 @@ Please install Docker using [these instructions](https://docs.docker.com/get-doc
 
 Get the latest Docker images
 ```bash
-docker pull rosukraine/learning:xenial-kinetic
+docker pull rosukraine/learning:ros_basics
 ```
 
 *Please note: On OS Windows you should switch your Docker Engine to Linux containers mode*
@@ -21,7 +21,7 @@ docker pull rosukraine/learning:xenial-kinetic
 
 Launch docker container using the following command
 ```bash
-docker run -d --name ros_basics -p 8080:8080 -p 8181:8181 -p 8282:8282 rosukraine/learning:xenial-kinetic 
+docker run -d --name ros_basics -p 8080:8080 -p 8181:8181 -p 8282:8282 rosukraine/learning:ros_basics 
 ```
 
 You could stop this container using command
