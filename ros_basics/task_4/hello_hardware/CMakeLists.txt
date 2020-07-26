@@ -4,7 +4,7 @@ project(hello_hardware)
 find_package(catkin REQUIRED)
 
 catkin_package(
-  CATKIN_DEPENDS rosserial_stm32 rosserial_python
+  CATKIN_DEPENDS rosserial_stm32 rosserial_python rosserial_server
 )
 
 install(FILES
