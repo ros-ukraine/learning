@@ -1,0 +1,8 @@
+<launch>
+  <arg name="port" default="8282"/>
+
+  <node pkg="rosserial_server" type="socket_node" name="rosserial_server" output="screen">
+    <param name="port" type="int" value="$(arg port)"/>
+  </node>
+  <node pkg="rosserial_python" type="message_info_service.py" name="rosserial_message_info" output="screen"/>
+</launch>
