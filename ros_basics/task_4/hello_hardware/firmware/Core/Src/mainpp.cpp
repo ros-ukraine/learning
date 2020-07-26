@@ -1,19 +1,13 @@
-/*
- * main.cpp
-
- *
- *  Created on: 2018/01/17
- *      Author: yoneken
- */
 #include <mainpp.h>
 #include <ros.h>
-#include <std_msgs/String.h>
+#include <hello_msgs/Print.h>
 
 ros::NodeHandle nh;
 
-std_msgs::String str_msg;
-ros::Publisher chatter("chatter", &str_msg);
-char hello[] = "Hello world!";
+hello_msgs::Print msg;
+ros::Publisher printer("print_server", &msg);
+char document[] = "Article";
+char content[] = "Hello from MCU!";
 
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart){
   nh.getHardware()->flush();
@@ -26,15 +20,14 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 void setup(void)
 {
   nh.initNode();
-  nh.advertise(chatter);
+  nh.advertise(printer);
 }
 
 void loop(void)
 {
-//  HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_3);
-
-  str_msg.data = hello;
-  chatter.publish(&str_msg);
+  msg.document_name = document;
+  msg.content = content;
+  printer.publish(&msg);
   nh.spinOnce();
 
   HAL_Delay(1000);
