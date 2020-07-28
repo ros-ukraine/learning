@@ -16,7 +16,6 @@ mkdir -p $firmware_messages
 
 mv $messages_directory/Inc/*.* $firmware_messages
 mv $messages_directory/Inc/ros $firmware_messages
-mv $messages_directory/Inc/rosapi $firmware_messages
 mv $messages_directory/Inc/std_msgs $firmware_messages
 mv $messages_directory/Inc/sensor_msgs $firmware_messages
 mv $messages_directory/Inc/rosserial_msgs $firmware_messages
