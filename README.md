@@ -38,7 +38,34 @@ You could access Cloud9 web IDE in any modern browser by opening this link [http
 
 ### Tasks
 
-Boilerplate code is located in ros_basics folder.
+Boilerplate code is located in *ros_basics* folder.
+
+#### Task 1
+
+##### ROS
+Simple hello ROS application
+
+##### Firmware
+Simple serial interface hello from MCU example.
+It was implemented for Nucleo 144 for FTDI and Virtual COM Port (CDC).
+
+#### Task 2
+
+##### ROS
+Parameters usage example with launch file.
+
+##### Firmware
+Echo immplementation using serial interface.
+It was implemented for Nucleo 144 for FTDI and Virtual COM Port (CDC).
+
+#### Task 3
+
+##### ROS
+Custom message package and subscriber.
+
+##### Firmware
+Implementation of blocking API for message sending and receiving.
+Based on that API was implemented echo for Nucleo 144 Virtual COM Port (CDC).
 
 #### Task 4
 
@@ -47,7 +74,7 @@ Boilerplate code is located in ros_basics folder.
 Please clone *https://github.com/yoneken/rosserial_stm32* into your workspace.
 
 
-##### STM32CubeIDE Project Setup
+##### STM32CubeIDE Project Setup for FTDI
 
 Use script example for STM32 message file generation
 ```bash
@@ -80,6 +107,11 @@ public:
   }
 ```
 
+##### STM32CubeIDE for Virtual COM Port (CDC)
+There is an example project for Nucleo-144 board in *hello_hardware* folder.
+It uses blocking API implemented in **Task 3**.  
+Based on that **STM32Hardware** class was implemented.
+
 ##### In order to run Serial to TCP bridge:
  
 1. Install pySerial package on host OS by running this command
@@ -101,4 +133,3 @@ roslaunch hello_hardware network.launch port:=8282
 ```bash
 python ./tcp_serial_redirect.py -c localhost:8282 /dev/ttyUSB0 115200
 ```
-
